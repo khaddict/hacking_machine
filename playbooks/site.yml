@@ -1,0 +1,26 @@
+---
+
+- hosts: all
+  become: true
+  roles:
+    - /home/ansible/ansible/roles/base
+
+- hosts: node_managers
+  become: true
+  roles:
+    - /home/ansible/ansible/roles/node_managers
+
+- hosts: hacking_machines
+  become: true
+  roles:
+    - /home/ansible/ansible/roles/hacking_machines
+
+- hosts: wiki_machines
+  become: true
+  roles:
+    - /home/ansible/ansible/roles/wiki_machines
+
+- hosts: database_machines
+  become: true
+  roles:
+    - /home/ansible/ansible/roles/database_machines

@@ -1,0 +1,28 @@
+---
+
+# WORDLISTS
+
+- name: [WORDLISTS] Install packages
+  apt:
+    name:
+      - wordlists
+      - seclists
+
+# TOOLS
+
+- name: [TOOLS] Install packages
+  apt:
+    name:
+      - tcpdump
+      - burpsuite
+      - responder
+      - nmap
+      - gobuster
+      - john
+      - hydra
+      - ffuf
+      - netcat
+      - metasploit-framework
+      - wireshark
+      - sqlmap
+      - wfuzz
