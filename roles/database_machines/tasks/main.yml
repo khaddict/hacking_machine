@@ -1,0 +1,7 @@
+---
+
+- name: [DB] Install postgresql-12
+  apt:
+    name:
+      - postgresql-12
+    state: latest
