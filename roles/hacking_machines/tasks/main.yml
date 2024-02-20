@@ -2,7 +2,7 @@
 
 # WORDLISTS
 
-- name: [WORDLISTS] Install packages
+- name: (WORDLISTS) Install packages
   apt:
     name:
       - wordlists
@@ -10,7 +10,7 @@
 
 # TOOLS
 
-- name: [TOOLS] Install packages
+- name: (TOOLS) Install packages
   apt:
     name:
       - tcpdump

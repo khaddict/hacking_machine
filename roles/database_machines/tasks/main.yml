@@ -1,6 +1,6 @@
 ---
 
-- name: [DB] Install postgresql-12
+- name: (DB) Install postgresql-12
   apt:
     name:
       - postgresql-12
