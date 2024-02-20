@@ -1,0 +1,23 @@
+---
+
+- name: Create wikijs user
+  user:
+    name: "{{ wikijs_user }}"
+    create_home: yes
+
+- name: Create wikijs directory
+  file:
+    path: "{{ wikijs_dir }}"
+    state: directory
+    owner: "{{ wikijs_user }}"
+
+- name: Download wiki-js.tar.gz
+  get_url:
+    url: "{{ wikijs_url }}"
+    dest: "{{ wikijs_dir }}"
+    owner: "{{ wikijs_user }}"
+
+- name: Extract wiki-js.tar.gz
+  unarchive:
+    src: "{{ wikijs_dir }}/wiki-js.tar.gz"
+    dest: "{{ wikijs_dir }}"

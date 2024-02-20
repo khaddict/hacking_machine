@@ -1,0 +1,5 @@
+---
+
+wikijs_url: "https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz"
+wikijs_user: "wikijs"
+wikijs_dir: "/home/{{ wikijs_user }}/wikijs"
