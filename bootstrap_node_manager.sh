@@ -18,6 +18,9 @@ install_dependencies(){
     if [ ! -d /home/ansible/ansible_venv ]; then
         python3 -m venv /home/ansible/ansible_venv
     fi
+    if [ ! -d /home/ansible/ansible ]; then
+        git clone https://github.com/khaddict/hacking_machine.git /home/ansible/ansible
+    fi   
     source /home/ansible/ansible_venv/bin/activate
     pip install -r /home/ansible/ansible/requirements.txt
 }
