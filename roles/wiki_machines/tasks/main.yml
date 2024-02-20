@@ -1,5 +1,10 @@
 ---
 
+- name: Create wikijs group
+  group:
+    name: "{{ wikijs_group }}"
+    state: present
+
 - name: Create wikijs user
   user:
     name: "{{ wikijs_user }}"
