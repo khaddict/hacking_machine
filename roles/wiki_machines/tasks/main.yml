@@ -3,6 +3,7 @@
 - name: Create wikijs user
   user:
     name: "{{ wikijs_user }}"
+    group: "{{ wikijs_group }}"
     create_home: yes
 
 - name: Create wikijs directory
@@ -21,3 +22,31 @@
   unarchive:
     src: "{{ wikijs_dir }}/wiki-js.tar.gz"
     dest: "{{ wikijs_dir }}"
+    remote_src: true
+
+- name: Copy config.yml file
+  template:
+    src: "files/config.yml"
+    dest: "{{ wikijs_dir }}/config.yml"
+    owner: "{{ wikijs_user }}"
+    group: "{{ wikijs_group }}"
+    mode: '0644'
+
+- name: Copy wikijs.service file
+  template:
+    src: "files/wikijs.service"
+    dest: "/etc/systemd/system/wikijs.service"
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Install nodejs
+  apt:
+    name: nodejs
+
+- name: Start wikijs.service + reload systemd
+  service:
+    name: wikijs
+    state: started
+    enabled: yes
+    daemon_reload: true
