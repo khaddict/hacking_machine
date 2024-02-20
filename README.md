@@ -13,4 +13,4 @@ Actuellement tout est en français mais ça sera traduit je ne sais quand.
 
 Notes :
 
-- wget -O /tmp/bootstrap_node_manager.sh https://raw.githubusercontent.com/khaddict/hacking_machine/main/bootstrap_node_manager.sh && chmod +x /tmp/bootstrap_node_manager.sh && cd /tmp && ./bootstrap_node_manager.sh
+- ```wget -O /tmp/bootstrap_node_manager.sh https://raw.githubusercontent.com/khaddict/hacking_machine/main/bootstrap_node_manager.sh && chmod +x /tmp/bootstrap_node_manager.sh && cd /tmp && ./bootstrap_node_manager.sh```
